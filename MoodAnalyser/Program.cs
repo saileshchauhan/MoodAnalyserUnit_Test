@@ -8,18 +8,18 @@ namespace MoodAnalyser
 {
  public class Program
     {
+        private string message;
+        public Program(string message)
+        {
+            this.message = message;
+        }
         static void Main(string[] args)
         {
         }
-        public int addNumber(int numOne,int numTwo)
+        public string Analyse_Mood()
         {
-            return numOne + numTwo;
-
-        }
-        public string Analyse_Mood(string message)
-        {
-            if (message.ToLower().Contains("sad"))
-                 return "SAD";
+            if (this.message.ToLower().Contains("sad"))
+                return "SAD";
             else
             {
                  return "HAPPY";
