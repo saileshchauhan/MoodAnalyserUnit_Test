@@ -21,13 +21,13 @@ namespace MoodAnalyserUnit_Test
         [TestMethod]
         public void Test_Analyse_Mood_Sad()
         {
-            string result = program.Analyse_Mood("I am in Sad mood");
+            string result = program.Analyse_Mood("I am in  Sad mood");
             Assert.AreEqual("SAD", result);
         }
         [TestMethod]
         public void Test_Analyse_Mood_Any()
         {
-            string result = program.Analyse_Mood("I am in any mood");
+            string result = program.Analyse_Mood("  ");
             Assert.AreEqual("HAPPY", result);
         }
     }
