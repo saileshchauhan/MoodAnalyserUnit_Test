@@ -42,6 +42,22 @@ namespace MoodAnalyserUnit_Test
             string mood = moodAnalyser.Analyse_Mood();
             Assert.AreEqual(expected, mood);
         }
+        //UC 3 TC 3.1
+        [TestMethod]
+        public void Given_NULL_Mood_Should_Throw()
+        {
+            try
+            {
+                string message = null;
+                Program moodAnalyser = new Program(message);
+                string mood = moodAnalyser.Analyse_Mood();
+
+            }
+            catch(MoodAnalyaserCustomException e)
+            {
+                Assert.AreEqual("Mood should not be null", e.Message);
+            }
+        }
 
     }
 }
