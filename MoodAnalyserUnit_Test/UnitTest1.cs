@@ -58,6 +58,21 @@ namespace MoodAnalyserUnit_Test
                 Assert.AreEqual("Mood should not be null", e.Message);
             }
         }
+        //UC3 TC 3.2
+        [TestMethod]
+        public void Given_EmptyMood_Should_Throw_MoodAException_Indicating_EmptyMood()
+        {
+            try
+            {
+                string message = " ";
+                Program moodAnalyser = new Program(message);
+                string mood = moodAnalyser.Analyse_Mood();
+            }
+            catch(MoodAnalyaserCustomException e)
+            {
+                Assert.AreEqual("Mood should not be empty",e.Message);
+            }
+        }
 
     }
 }

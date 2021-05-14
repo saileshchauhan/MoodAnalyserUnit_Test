@@ -22,7 +22,7 @@ namespace MoodAnalyser
             {
                 if (message.Equals(string.Empty))
                 {
-                    throw new MoodAnalyaserCustomException(MoodAnalyaserCustomException.ExceptionType.EMPTY_MESSAGE,"Mood Should not be empty");
+                    throw new MoodAnalyaserCustomException(MoodAnalyaserCustomException.ExceptionType.EMPTY_MESSAGE,"Mood should not be null");
                 }
                 if (this.message.Contains("sad"))
                     return "SAD";
@@ -33,7 +33,7 @@ namespace MoodAnalyser
             }
             catch(NullReferenceException)
             {
-                throw new MoodAnalyaserCustomException(MoodAnalyaserCustomException.ExceptionType.NULL_MESSAGE, "Mood Should not be empty");
+                throw new MoodAnalyaserCustomException(MoodAnalyaserCustomException.ExceptionType.NULL_MESSAGE, "Mood should not be null");
             }
         }
     }
